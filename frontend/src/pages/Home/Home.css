@@ -1,0 +1,241 @@
+.home-container {
+  padding: 5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.market-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #111827;
+  border: 1px solid #374151;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.market-status.open {
+  background-color: rgba(128, 255, 96, 0.1);
+  border-color: #80ff60;
+  color: #80ff60;
+}
+
+.market-status.closed {
+  background-color: rgba(239, 68, 68, 0.1);
+  border-color: #ef4444;
+  color: #ef4444;
+}
+
+.status-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.market-status.open .status-indicator {
+  background-color: #80ff60;
+}
+
+.market-status.closed .status-indicator {
+  background-color: #ef4444;
+}
+
+.market-movers {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.market-section {
+  background-color: #1f2937;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+.market-section h2 {
+  font-size: 1.8rem;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.section-description {
+  color: #9ca3af;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.stocks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stock-card {
+  background-color: #111827;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.stock-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px -1px rgba(0, 0, 0, 0.4), 0 3px 6px -1px rgba(0, 0, 0, 0.3);
+  background-color: #2d3748;
+}
+
+.stock-info h3 {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.stock-symbol {
+  color: #9ca3af;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.stock-metrics {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.75rem;
+  border-top: 1px solid #374151;
+}
+
+.stock-price {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+}
+
+.stock-change {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 0;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  min-width: 80px;
+  text-align: center;
+}
+
+.stock-change.positive {
+  color: #80ff60;
+  background-color: rgba(128, 255, 96, 0.1);
+}
+
+.stock-change.negative {
+  color: #ef4444;
+  background-color: rgba(239, 68, 68, 0.1);
+}
+
+.stock-volume {
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.loading-spinner::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  border: 3px solid #374151;
+  border-top: 3px solid #80ff60;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.error-message {
+  color: #ef4444;
+  text-align: center;
+  margin: 1rem 0;
+  padding: 1rem;
+  background-color: #1f2937;
+  border-radius: 8px;
+  border: 1px solid #374151;
+}
+
+.no-data-message {
+  text-align: center;
+  padding: 3rem 2rem;
+  background-color: #111827;
+  border-radius: 8px;
+  color: #9ca3af;
+  font-size: 1rem;
+  line-height: 1.5;
+  border: 1px solid #374151;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    padding: 2rem 1rem;
+  }
+
+  .section-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .market-status {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .market-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .stocks-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stock-card {
+    padding: 1rem;
+  }
+
+  .stock-metrics {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .stock-change {
+    min-width: auto;
+  }
+}

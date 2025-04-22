@@ -1,0 +1,162 @@
+.stock-info-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.section-title {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #374151;
+}
+
+.tables-container {
+  display: flex;
+  gap: 2rem;
+  background-color: #1f2937;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+}
+
+.table-section {
+  flex: 1;
+  min-width: 0; /* Prevents flex items from overflowing */
+}
+
+.stock-info-table,
+.technical-indicators-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #f3f4f6;
+}
+
+.stock-info-table td,
+.technical-indicators-table td {
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #374151;
+}
+
+.stock-info-table tr:last-child td,
+.technical-indicators-table tr:last-child td {
+  border-bottom: none;
+}
+
+.label {
+  color: #9ca3af;
+  font-weight: 500;
+  width: 40%;
+  cursor: help;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.value {
+  color: #ffffff;
+  font-weight: 600;
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Indicator-specific styles */
+.value.overbought {
+  color: #ef4444;
+}
+
+.value.oversold {
+  color: #10b981;
+}
+
+.value.bullish {
+  color: #10b981;
+  font-weight: 700;
+}
+
+.value.strong-bullish {
+  color: #059669;
+  font-weight: 800;
+  text-shadow: 0 0 8px rgba(16, 185, 129, 0.3);
+}
+
+.value.bearish {
+  color: #ef4444;
+  font-weight: 700;
+}
+
+.value.strong-bearish {
+  color: #dc2626;
+  font-weight: 800;
+  text-shadow: 0 0 8px rgba(239, 68, 68, 0.3);
+}
+
+/* Volume ratio specific styles */
+.value[data-volume-ratio="high"] {
+  color: #f59e0b;
+  font-weight: 700;
+}
+
+/* ADX specific styles */
+.value[data-adx="strong"] {
+  color: #8b5cf6;
+  font-weight: 700;
+}
+
+/* Stochastic specific styles */
+.value[data-stoch="overbought"] {
+  color: #ef4444;
+}
+
+.value[data-stoch="oversold"] {
+  color: #10b981;
+}
+
+/* Tooltip styles */
+.label:hover::after {
+  content: attr(title);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem;
+  background-color: #1f2937;
+  color: #f3f4f6;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  white-space: nowrap;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .stock-info-container {
+    gap: 1.5rem;
+  }
+
+  .tables-container {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .stock-info-table td,
+  .technical-indicators-table td {
+    padding: 0.6rem 0.8rem;
+  }
+
+  .label:hover::after {
+    display: none;
+  }
+} 

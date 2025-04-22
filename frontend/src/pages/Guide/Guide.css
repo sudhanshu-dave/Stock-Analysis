@@ -1,0 +1,180 @@
+.guide-container {
+  padding: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.guide-header {
+  margin-bottom: 2rem;
+}
+
+.guide-header h1 {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.guide-header p {
+  color: #9ca3af;
+  font-size: 1rem;
+}
+
+.guide-section {
+  background-color: #1f2937;
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+.guide-section h2 {
+  font-size: 1.8rem;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #374151;
+}
+
+.indicator-card {
+  background-color: #111827;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.indicator-card h3 {
+  color: #ffffff;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.indicator-description {
+  color: #9ca3af;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.interpretation-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.interpretation-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  background-color: #1f2937;
+  border-radius: 6px;
+  color: #ffffff;
+}
+
+.interpretation-item.bullish {
+  border-left: 4px solid #10b981;
+}
+
+.interpretation-item.bearish {
+  border-left: 4px solid #ef4444;
+}
+
+.interpretation-item.neutral {
+  border-left: 4px solid #9ca3af;
+}
+
+.signal-icon {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.signal-icon.bullish {
+  background-color: #10b981;
+}
+
+.signal-icon.bearish {
+  background-color: #ef4444;
+}
+
+.signal-icon.neutral {
+  background-color: #9ca3af;
+}
+
+.recommendation-section {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 2px solid #374151;
+}
+
+.recommendation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.recommendation-card {
+  padding: 1rem;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.recommendation-card.strong-buy {
+  background-color: rgba(16, 185, 129, 0.2);
+  color: #10b981;
+  border: 1px solid #059669;
+}
+
+.recommendation-card.buy {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+}
+
+.recommendation-card.hold {
+  background-color: rgba(156, 163, 175, 0.1);
+  color: #9ca3af;
+}
+
+.recommendation-card.sell {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+
+.recommendation-card.strong-sell {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+  border: 1px solid #dc2626;
+}
+
+@media (max-width: 768px) {
+  .guide-container {
+    padding: 2rem 1rem;
+  }
+
+  .guide-header h1 {
+    font-size: 2rem;
+  }
+
+  .guide-section {
+    padding: 1.5rem;
+  }
+
+  .guide-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .indicator-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .recommendation-grid {
+    grid-template-columns: 1fr;
+  }
+}
