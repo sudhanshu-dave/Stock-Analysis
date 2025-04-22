@@ -2,7 +2,7 @@ Stock Analysis (Using Stock Market Indicators)
 
 Group Members:
 
-1.Sudhanshu Dilip Dave 
+1.Sudhanshu Dilip Dave <\Br>
     PRN:22211610
     Rollno:391012
 2.Revat Meshram
