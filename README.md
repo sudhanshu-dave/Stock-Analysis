@@ -6,7 +6,7 @@ Group(13) Members:
 
     PRN:22211610
     Rollno:391012
-![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://myoctocat.com/assets/images/base-octocat.svg)
+![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.]()
 2.Revat Meshram
 
     PRN:22210847
