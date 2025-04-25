@@ -6,7 +6,7 @@ Group(13) Members:
 
     PRN:22211610
     Rollno:391012
-    [Certificate](FILE_NAME.pdf)
+    [Certificate](Certificates)
 2.Revat Meshram
 
     PRN:22210847
