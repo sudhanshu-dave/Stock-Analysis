@@ -12,4 +12,4 @@ Group(13) Members:
 
     PRN:22210847
     Rollno:391036
-![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://github.com/sudhanshu-dave/Stock-Analysis/blob/main/Certificates/391012_Sudhanshu%20Dave.png)
+![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.]([https://github.com/sudhanshu-dave/Stock-Analysis/blob/main/Certificates/391012_Sudhanshu%20Dave.png](https://github.com/sudhanshu-dave/Stock-Analysis/blob/main/Certificates/391036_Revat_Meshram.jpg))
